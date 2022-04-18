@@ -1,2 +1,2 @@
 # HAlgPapers
-crowd sourced past paper solutions
+crowd sourced past solutions
