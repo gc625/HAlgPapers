@@ -1,0 +1,45 @@
+
+% PACKAGES 
+\usepackage{mathtools}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{etoolbox}
+% Margins 
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+% Section Number settings
+\setcounter{secnumdepth}{0} 
+
+% Header Lines
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\leftmark}
+\fancyhead[L]{Student Solutions}
+
+% multiinput
+\newcommand{\inputmulti}[1]{%
+  \renewcommand{\do}[1]{\newpage\input{##1}}% How each item will be processed
+  \docsvlist{#1}% Process list
+}
+
+% MATH OPERATORS/SYMBOLS 
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\newcommand{\qed}{$\hfill\square$}
+\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\st}[1]{\shortintertext{#1}}
+\DeclareMathOperator{\Ima}{Im}
