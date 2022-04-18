@@ -6,9 +6,9 @@ crowd sourced past paper solutions for Honors Algebra (MATH 10069) at the Univer
 ```bash
 .
 ├── README.md
-├── allyears.pdf
-├── allyears.tex
-├── exam_papers
+├── main.pdf
+├── main.tex 
+├── exam_papers 
 │   ├── 1415.pdf
 │   ├── 1516.pdf
 │   ├── 1617.pdf
@@ -26,3 +26,7 @@ crowd sourced past paper solutions for Honors Algebra (MATH 10069) at the Univer
     ├── 1920.tex
     └── 2021.tex
 ```
+
+`exam_papers` contains PDFs of exam papers by year
+`years`  contains the tex files for you to type up solutions. 
+`main.tex` is the tex files that aggregates all solutions in one 
