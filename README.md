@@ -10,6 +10,8 @@ Section titles have been generated, but not neccesarily for subquestions (eg: Q1
 
 
 
+
+
 ## Folder Structure
 
 ```bash
@@ -43,4 +45,3 @@ Section titles have been generated, but not neccesarily for subquestions (eg: Q1
 `main.tex` is the tex files that aggregates all solutions in one 
 
 
->>>>>>> 73f2fe1fbf6516350daf9ac93cfce77d7107b36a
