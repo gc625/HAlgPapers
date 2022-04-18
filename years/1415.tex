@@ -9,21 +9,40 @@ An vector space with exactly 16 elements is $\Z/16\Z=\{0,1,2,\ldots,15\}$
 \subsubsection{Q1c}
 
 \subsection{Question 2}
-Consider the matrix that represents $\mathcal{B}$
+\subsubsection{Q2a}
+To show that $\mathcal{B}$ forms a bsis, consider the matrix that represents $\mathcal{B}$
 \begin{align*}
-\mathcal{B}=&\ 	\begin{pmatrix}
+B=&\ 	\begin{pmatrix}
 1  &1 & 1\\
  0 &1 &1 \\
   0& 0&1 
 \end{pmatrix}\\
 \st{using gaussian elimination we find that }
-rref(\mathcal{B})=&\ \begin{pmatrix}
+rref(B)=&\ \begin{pmatrix}
 1  &0 & 0\\
  0 &1 &0 \\
   0& 0&1 
 \end{pmatrix}
-\st{or that $\dim{\mathcal{B}}=3$ so $\mathcal{B}$ spans $V=\R^3$}
+\st{or that $\dim{B}=3$ so $\mathcal{B}$ spans $V=\R^3$}
 \end{align*}
+
+\subsubsection{Q2b}
+\paragraph{i)} 
+\begin{align*}
+	\st{Denote the equivalence class $[v]$ for $v\in V$ by }
+	[v]= \{v+u:u\in U\}
+	\st{and addition and multiplication is defined as follows}
+k[n]=&\ [kn]
+\st{for all $k\in \R$, and}
+[v_1]+[v_2]=&\ [v_1+v_2]	
+\st{thus the canonical mapping is simply}
+can(v):V\to V/U =&\ [v]\\
+\st{and therefore $\ker{(can)}={0}$ as }
+[0] =&\ \{0+u:u\in U\}
+\end{align*}
+
+
+
 \subsection{Question 3}
 
 \subsection{Question 4}
