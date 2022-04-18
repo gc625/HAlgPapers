@@ -7,6 +7,7 @@ Using an editor like TexPad on Mac, type solutions in the `.tex` files for the r
 Section titles have been generated, but not neccesarily for subquestions (eg: Q1a), so please add those as you go along.
 
 example answer:
+For answers with multiple lines of equations, I prefer to use the `align` environment using `\shortintertext` (or `\st`) to place text in between equations. Use `&\` to set point of alignment for each line.
 
 ![alt text](/docs/example.png)
 
