@@ -1,6 +1,15 @@
 # HAlgPapers
 crowd sourced past paper solutions for Honors Algebra (MATH 10069) at the University of Edinburgh.
 
+## Instructions
+Using an editor like TexPad on Mac, type solutions in the `.tex` files for the respective year (eg: 1415.tex for the 2014-2015 exam), and view the output of `main.tex`
+
+Section titles have been generated, but not neccesarily for subquestions (eg: Q1a), so please add those as you go along.
+
+
+
+
+
 ## Folder Structure
 
 ```bash
@@ -27,6 +36,10 @@ crowd sourced past paper solutions for Honors Algebra (MATH 10069) at the Univer
     └── 2021.tex
 ```
 
-`exam_papers` contains PDFs of exam papers by year
+`exam_papers` contains PDFs of exam papers by year, 1415 = 2014-2015.
+
 `years`  contains the tex files for you to type up solutions. 
+
 `main.tex` is the tex files that aggregates all solutions in one 
+
+
