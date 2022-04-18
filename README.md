@@ -6,8 +6,9 @@ Using an editor like TexPad on Mac, type solutions in the `.tex` files for the r
 
 Section titles have been generated, but not neccesarily for subquestions (eg: Q1a), so please add those as you go along.
 
+example answer:
 
-
+![alt text](/docs/example.png)
 
 
 
