@@ -23,7 +23,40 @@
 \end{align*}
 
 \paragraph{(ii)} 
-The proof in (i) fails if $T$ is not self adjoint due to the fact that we cannot claim $(x,Tx)=(Tx,x)$ unless $T$ is self adjoint. 
+The proof in (i) fails if $T$ is not self adjoint due to the fact that we cannot claim $(x,Tx)=(Tx,x)$ unless $T$ is self adjoint.
+ 
 \paragraph{(iii)}
+\begin{align*}
+\st{By the self adjoint property}
+(Tv,w)=&\ (v,Tw)	\\
+\st{since $Tv=\lambda v$ and $Tw=\mu w$} 
+(\lambda v , w) =&\ (v,\mu w)\\
+\st{by property 1}
+(\lambda v , w) =&\  \lambda(v,w)\\
+(v,\mu w) =&\ \mu(v,w)\\
+\st{thus}
+\lambda(v,w)=&\ \mu(v,w)\\
+\st{which cannot be true unless $(v,w)=0$ as $\lambda$ and $\mu$ are distinct eigenvalues.}
+\end{align*}
+\paragraph{(iv)}
 
 \subsection{Question 4}
+
+\subsubsection{Q4a}
+$\sqrt{\alpha}\in\Q$ implies that $\alpha\in\Q$. Thus result of the mapping $f(p_nX^n+\cdots+p_1X+p_0)= p_n(\sqrt{\alpha})^n+\cdots+p_1\sqrt{\alpha}+p_0$ can be simplied into the form $a+b\sqrt{\alpha}$, where $a,b\in\Q$. If $n$ is even. 
+\begin{align*}
+p_n(\sqrt{\alpha})^n+\cdots+p_1\sqrt{\alpha}+p_0=&\ p_0+p_2\alpha+p_4\alpha^2+\cdots+p_n\alpha^{\frac{n}{2}}\\
+&+p_1\sqrt{\alpha}+p_3\alpha\sqrt{a}+\cdots+p_{n-1}\alpha^{\frac{n}{2}-1}\sqrt{\alpha}\\
+=&\ \sum_{i=0}^{n/2}p_{2i}\alpha^{i}+\sum_{i=0}^{\frac{n}{2}-1}p_{2i+1}\alpha^{i}\sqrt{\alpha} 
+\st{let}
+a=&\ \sum_{i=0}^{n/2}p_{2i}\alpha^{i}\\
+\st{and}
+b=&\ \sum_{i=0}^{\frac{n}{2}-1}p_{2i+1}\alpha^{i}
+\st{to get}
+\ p_0+p_2\alpha+p_4\alpha^2+\cdots+p_n\alpha^{\frac{n}{2}}=&\ a+b\sqrt{\alpha}
+\st{proof is same if $n$ is odd except for an additional term. Therefore, $f$ maps every rational polynomial to a real number of the form $a+b\sqrt{\alpha}$ for some $a,b\in\Q$, hence}
+\Ima{f}=&\ \{a+b\sqrt{\alpha}:a,b\in\Q\}
+\end{align*} 
+
+
+
