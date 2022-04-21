@@ -10,6 +10,8 @@ git clone https://github.com/gc625/HAlgPapers
 
 Section titles have been generated, but not neccesarily for subquestions (eg: Q1a), so please add those as you go along.
 
+use `\textcolor{red}{[comment]}` for solutions you're not sure/comments 
+
 ### example answer
 For answers with multiple lines of equations, I prefer to use the `align` environment using `\shortintertext` (or `\st`) to place text in between equations. Use `&\` to set point of alignment for each line.
 
