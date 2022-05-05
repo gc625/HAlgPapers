@@ -2,6 +2,106 @@
 
 \subsection{Question 1}
 \subsection{Question 2}
+\subsubsection{Q2a}
+To get the representing matrix of $f$, evaluate $f$ at the standard basis.
+\begin{align*}
+	f(1,0,0)=&\ (0,6)\\ 
+	f(0,1,0)=&\ (-2,-4)\\ 
+	f(0,0,1)=&\ (3,0)\\ 
+\st{Lets call the representing matrix $M$}
+M=&\ \begin{pmatrix}
+0&-2&3\\
+6&-4&0	
+\end{pmatrix}
+\st{Note that $f$ currently is mapping from $\R^3$ to $\R^2$ w.r.t. to standard bases $S(3)$ and $S(2)$. So $MA$, where $A$ is matrix formed by the ordered basis $\mathcal{A}$}
+	A=&\ \begin{pmatrix}
+		1&1&0\\
+		1&2&1\\
+		1&1&2\\
+	\end{pmatrix}\\
+	MA=&\ \begin{pmatrix}
+0&-2&3\\
+6&-4&0	
+\end{pmatrix}\begin{pmatrix}
+		1&1&0\\
+		1&2&1\\
+		1&1&2\\
+	\end{pmatrix}\\
+	=&\ \begin{pmatrix}1&-1&4\\ 2&-2&-4\end{pmatrix}
+	\st{represents $_{S(2)}[f]_{\mathcal{A}}$.}
+	B= \begin{pmatrix}
+		2&1\\
+		1&2\\
+	\end{pmatrix}
+\st{finally $_{\mathcal{B}}[f]_{\mathcal{A}}$ is then $B^{-1}MA$}
+=&\ \begin{pmatrix}
+		2&1\\
+		1&2\\
+	\end{pmatrix}^{-1}\begin{pmatrix}1&-1&4\\ 2&-2&-4\end{pmatrix}\\
+	=&\ \begin{pmatrix}0&0&4\\ 1&-1&-4\end{pmatrix}
+\end{align*}
+
+\subsubsection{Q2b}
+\paragraph{(i)}
+
+
+Consider $A=\begin{pmatrix}
+	a&b\\
+	c&d\end{pmatrix}$
+\begin{align*}
+Tr(A)^2=&\ (a+d)^2\\
+Tr(A^2)=&\ a^2+bc+bc+d^2\\
+\st{by construction, we have}
+Tr(A)^2=&\ Tr(A^2)\\
+(a+d)^2=&\ a^2+2bc+d^2\\
+a^2+2ad+d^2=&\ a^2+2bc+d^2\\
+\st{which implies}
+ad=&\ bc
+\st{since $\det{A}=ad-bc$, it follows that $\det{A}=0$ }
+\end{align*}
+
+\paragraph{(ii)}
+
+
+\textcolor{red}{idk}
+
+
+
+\subsubsection{Q2c}
+\paragraph{(i)}
+
+
+A mapping is a ring homomorphism if 
+\begin{align*}
+	f(x+y)=&\ f(x)+f(y)\\
+	f(xy)=&\ f(x)f(y)
+\end{align*}
+\begin{align*}
+\st{$f_1$ violates the first property, consider}
+f(0)=&\ \begin{pmatrix}
+	0&0\\
+	0&0\\
+\end{pmatrix}
+\st{but}
+f(1)+f(-1)=&\ \begin{pmatrix}
+	1&0\\
+	0&-1\\
+\end{pmatrix}\begin{pmatrix}
+	-1&0\\
+	0&1\\
+\end{pmatrix}\\
+=&\  \begin{pmatrix}
+	-1&0\\
+	0&-1\\
+\end{pmatrix}
+\st{so}
+f(0)\neq&\ f(-1)+f(1)
+\end{align*}
+\paragraph{(ii)}
+\textcolor{red}{lol cant think of one}
+
+
+
 \subsection{Question 3}
 \subsubsection{Q3a}
 \paragraph{(i)} Recall that the complex inner product has the following properties:
