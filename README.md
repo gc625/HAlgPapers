@@ -2,10 +2,12 @@
 crowd sourced past paper solutions for Honors Algebra (MATH 10069) at the University of Edinburgh.
 
 ## Instructions
-1. Clone repo
+1. Fork the repo
+2. Clone the fork
 ```bash
-git clone https://github.com/gc625/HAlgPapers
+git clone https://github.com/{YOUR_USERNAME}/HAlgPapers
 ```
+
 2. Using an editor like TexPad on Mac, type solutions in the `.tex` files for the respective year (eg: 1415.tex for the 2014-2015 exam), and view the output of `main.tex`. Once complete, submit pull request :) 
 
 Section titles have been generated, but not neccesarily for subquestions (eg: Q1a), so please add those as you go along.
