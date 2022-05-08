@@ -59,7 +59,20 @@ a^2+2ad+d^2=&\ a^2+2bc+d^2\\
 ad=&\ bc
 \st{since $\det{A}=ad-bc$, it follows that $\det{A}=0$ }
 \end{align*}
-
+Alternative method:\\
+By Cayley–Hamilton theorem,
+  \begin{equation}
+    A^2 - \operatorname{Tr}{A} + \operatorname{det}{A} \mathbb{I}_2 = 0
+  \end{equation}
+  Take trace on both side:
+  \begin{equation}
+    \begin{aligned}
+      \operatorname{Tr}{A^2} - (\operatorname{Tr}{A})^2 + 2 \operatorname{det}{A} & = 0\\
+      2 \operatorname{det}{A} & = 0
+    \end{aligned}
+  \end{equation}
+  Since \(2\) is a unit in \(\mathbb{C}\), so \[\operatorname{det}{A} = 0.\]
+  
 \paragraph{(ii)}
 
 
