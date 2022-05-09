@@ -3,173 +3,228 @@
 \subsection{Question 1}
 \subsection{Question 2}
 \subsubsection{Q2a}
+Here provides a faster method:\\
+\begin{alignat*}{2}
+	f(1, 1, 1) & = (1, 2)   & = 0 (2, 1) + 1 (1, 2) \\
+	f(1, 2, 1) & = (-1, -2) & = 0 (2, 1) - 1 (1, 2) \\
+	f(0, 1, 2) & = (4, -4)  & = 4 (2, 1) - 4 (1, 2)
+\end{alignat*}
+Hence,
+\begin{alignat*}{2}
+	{}_\mathcal{B}[f]_{\mathcal{A}} & =
+	\begin{pmatrix}
+		0 & 0  & 4  \\
+		1 & -1 & -4
+	\end{pmatrix}
+\end{alignat*}
+Standard method:\\
 To get the representing matrix of $f$, evaluate $f$ at the standard basis.
 \begin{align*}
-	f(1,0,0)=&\ (0,6)\\ 
-	f(0,1,0)=&\ (-2,-4)\\ 
-	f(0,0,1)=&\ (3,0)\\ 
-\st{Lets call the representing matrix $M$}
-M=&\ \begin{pmatrix}
-0&-2&3\\
-6&-4&0	
-\end{pmatrix}
-\st{Note that $f$ currently is mapping from $\R^3$ to $\R^2$ w.r.t. to standard bases $S(3)$ and $S(2)$. So $MA$, where $A$ is matrix formed by the ordered basis $\mathcal{A}$}
-	A=&\ \begin{pmatrix}
-		1&1&0\\
-		1&2&1\\
-		1&1&2\\
-	\end{pmatrix}\\
-	MA=&\ \begin{pmatrix}
-0&-2&3\\
-6&-4&0	
-\end{pmatrix}\begin{pmatrix}
-		1&1&0\\
-		1&2&1\\
-		1&1&2\\
-	\end{pmatrix}\\
-	=&\ \begin{pmatrix}1&-1&4\\ 2&-2&-4\end{pmatrix}
+	f(1,0,0)= & \ (0,6)                                                          \\
+	f(0,1,0)= & \ (-2,-4)                                                        \\
+	f(0,0,1)= & \ (3,0)                                                          \\
+	\st{Lets call the representing matrix $M$}
+	M=        & \ \begin{pmatrix}
+		              0 & -2 & 3 \\
+		              6 & -4 & 0
+	              \end{pmatrix}
+	\st{Note that $f$ currently is mapping from $\R^3$ to $\R^2$ w.r.t. to standard bases $S(3)$ and $S(2)$. So $MA$, where $A$ is matrix formed by the ordered basis $\mathcal{A}$}
+	A=        & \ \begin{pmatrix}
+		              1 & 1 & 0 \\
+		              1 & 2 & 1 \\
+		              1 & 1 & 2 \\
+	              \end{pmatrix}                                                 \\
+	MA=       & \ \begin{pmatrix}
+		              0 & -2 & 3 \\
+		              6 & -4 & 0
+	              \end{pmatrix}\begin{pmatrix}
+		                           1 & 1 & 0 \\
+		                           1 & 2 & 1 \\
+		                           1 & 1 & 2 \\
+	                           \end{pmatrix}                                    \\
+	=         & \ \begin{pmatrix}1&-1&4\\ 2&-2&-4\end{pmatrix}
 	\st{represents $_{S(2)}[f]_{\mathcal{A}}$.}
 	B= \begin{pmatrix}
-		2&1\\
-		1&2\\
-	\end{pmatrix}
-\st{finally $_{\mathcal{B}}[f]_{\mathcal{A}}$ is then $B^{-1}MA$}
-=&\ \begin{pmatrix}
-		2&1\\
-		1&2\\
-	\end{pmatrix}^{-1}\begin{pmatrix}1&-1&4\\ 2&-2&-4\end{pmatrix}\\
-	=&\ \begin{pmatrix}0&0&4\\ 1&-1&-4\end{pmatrix}
+		   2 & 1 \\
+		   1 & 2 \\
+	   \end{pmatrix}
+	\st{finally $_{\mathcal{B}}[f]_{\mathcal{A}}$ is then $B^{-1}MA$}
+	=         & \ \begin{pmatrix}
+		              2 & 1 \\
+		              1 & 2 \\
+	              \end{pmatrix}^{-1}\begin{pmatrix}1&-1&4\\ 2&-2&-4\end{pmatrix} \\
+	=         & \ \begin{pmatrix}0&0&4\\ 1&-1&-4\end{pmatrix}
 \end{align*}
 
 \subsubsection{Q2b}
 \paragraph{(i)}
-
-
 Consider $A=\begin{pmatrix}
-	a&b\\
-	c&d\end{pmatrix}$
+		a & b \\
+		c & d\end{pmatrix}$
 \begin{align*}
-Tr(A)^2=&\ (a+d)^2\\
-Tr(A^2)=&\ a^2+bc+bc+d^2\\
-\st{by construction, we have}
-Tr(A)^2=&\ Tr(A^2)\\
-(a+d)^2=&\ a^2+2bc+d^2\\
-a^2+2ad+d^2=&\ a^2+2bc+d^2\\
-\st{which implies}
-ad=&\ bc
-\st{since $\det{A}=ad-bc$, it follows that $\det{A}=0$ }
+	Tr(A)^2=     & \ (a+d)^2       \\
+	Tr(A^2)=     & \ a^2+bc+bc+d^2 \\
+	\st{by construction, we have}
+	Tr(A)^2=     & \ Tr(A^2)       \\
+	(a+d)^2=     & \ a^2+2bc+d^2   \\
+	a^2+2ad+d^2= & \ a^2+2bc+d^2   \\
+	\st{which implies}
+	ad=          & \ bc
+	\st{since $\det{A}=ad-bc$, it follows that $\det{A}=0$ }
 \end{align*}
 Alternative method:\\
-By Cayley–Hamilton theorem,
-  \begin{equation}
-    A^2 - \operatorname{Tr}{A} + \operatorname{det}{A} \mathbb{I}_2 = 0
-  \end{equation}
-  Take trace on both side:
-  \begin{equation}
-    \begin{aligned}
-      \operatorname{Tr}{A^2} - (\operatorname{Tr}{A})^2 + 2 \operatorname{det}{A} & = 0\\
-      2 \operatorname{det}{A} & = 0
-    \end{aligned}
-  \end{equation}
-  Since \(2\) is a unit in \(\mathbb{C}\), so \[\operatorname{det}{A} = 0.\]
-  
+By Cayley-Hamilton theorem,
+\begin{equation*}
+	A^2 - \operatorname{Tr}{A} + \operatorname{det}{A} \mathbb{I}_2 = 0
+\end{equation*}
+Take trace on both side:
+\begin{equation*}
+	\begin{aligned}
+		\operatorname{Tr}{A^2} - (\operatorname{Tr}{A})^2 + 2 \operatorname{det}{A} & = 0 \\
+		2 \operatorname{det}{A}                                                     & = 0
+	\end{aligned}
+\end{equation*}
+Since \(2\) is a unit in \(\mathbb{C}\), so \(\operatorname{det}{A} = 0.\)
 \paragraph{(ii)}
-
-
-\textcolor{red}{idk}
-
-
-
+No.
+Notice in the previous proof requires a condition is 2 is a unit.
+So let \(F = \mathbb{F}_2\), then let \(A = \mathbb{I}_2 = \begin{pmatrix}1&0\\0&1\end{pmatrix}\). \(\Tr{A^2} = (\Tr{A})^2\) but \(\det{A} = 1 \neq 0\)
 \subsubsection{Q2c}
-\paragraph{(i)}
-
-
-A mapping is a ring homomorphism if 
+A mapping is a ring homomorphism if
 \begin{align*}
-	f(x+y)=&\ f(x)+f(y)\\
-	f(xy)=&\ f(x)f(y)
+	f(x+y)= & \ f(x)+f(y) \\
+	f(xy)=  & \ f(x)f(y)
 \end{align*}
+\paragraph{(i)}
 \begin{align*}
-\st{$f_1$ violates the first property, consider}
-f(0)=&\ \begin{pmatrix}
-	0&0\\
-	0&0\\
-\end{pmatrix}
-\st{but}
-f(1)+f(-1)=&\ \begin{pmatrix}
-	1&0\\
-	0&-1\\
-\end{pmatrix}\begin{pmatrix}
-	-1&0\\
-	0&1\\
-\end{pmatrix}\\
-=&\  \begin{pmatrix}
-	-1&0\\
-	0&-1\\
-\end{pmatrix}
-\st{so}
-f(0)\neq&\ f(-1)+f(1)
+	\st{$f_1$ violates the first property, consider}
+	f(0)=       & \ \begin{pmatrix}
+		                0 & 0 \\
+		                0 & 0 \\
+	                \end{pmatrix}
+	\st{but}
+	f(1)+f(-1)= & \ \begin{pmatrix}
+		                1 & 0  \\
+		                0 & -1 \\
+	                \end{pmatrix}\begin{pmatrix}
+		                             -1 & 0 \\
+		                             0  & 1 \\
+	                             \end{pmatrix} \\
+	=           & \  \begin{pmatrix}
+		                 -1 & 0  \\
+		                 0  & -1 \\
+	                 \end{pmatrix}
+	\st{so}
+	f(0)\neq    & \ f(-1)+f(1)
 \end{align*}
 \paragraph{(ii)}
-\textcolor{red}{lol cant think of one}
-
-
-
+\(f_2\) violates the first property,
+consider \(p_1(X) = X + 1\) and \(p_2(X) = -X\).
+\begin{align*}
+	f_2(p_1(X))               & = 1                       \\
+	f_2(p_2(X))               & = -1                      \\
+	f_2(p_1(X) + p_2(X))      & = f_2(1) = 1              \\
+	f_2(p_1(X)) + f_2(p_2(X)) & \neq f_2(p_1(X) + p_2(X))
+\end{align*}
+\subsubsection{Q2d}
+\paragraph{(i)} \textbf{Yes}. See Exercise 80.
+\paragraph{(ii)} \textbf{No}. Let \(P = Q\) be constant and it violates property 3.
+\paragraph{(iii)} \textbf{No}. Let \(P = \prod_{i=1}^{n}{(X - x_i)}\) and it violates property 3.
 \subsection{Question 3}
 \subsubsection{Q3a}
+See THEOREM 5.3.7.
 \paragraph{(i)} Recall that the complex inner product has the following properties:
 \begin{align*}
-(\lambda \vec{x}+\mu\vec{y},\vec{z}) =&\ \lambda(\vec{x},\vec{z} )+\mu(\vec{y},\vec{z}) \tag{1}\\
-(\vec{x},\vec{y})=&\ \overline{(\vec{y},\vec{x})}\tag{2}\\
-(\vec{x},\vec{x})\geq &\ 0 \tag{3}
-\st{and $T$ being self adjoint}
-(T\vec{x},{y})=&\ (\vec{x},T\vec{y})
-\st{Thus, let $v$ be an eigenvector with eigenvalue $\lambda$.}
-\lambda (x,x) =&\ (x,\lambda x) \quad\textit{(property 1)}\\
-=&\ (x,T x) \quad\textit{(eigenvec property)}\\
-=&\ (T x,x) \quad\textit{(self adjoint prop)}\\
-=&\ (\lambda x, x) \quad\textit{(eigenvec propety)}\\
-=&\ \overline{(x,\lambda x)} \quad\textit{(property 2)}\\
-=&\ (x,\overline{\lambda}x) \quad\textit{\textcolor{red}{(not sure why we can claim $x=\bar{x}$ here)}}\\
-=&\ \overline{\lambda}(x,x)\quad\textit{(property 1)}
-\st{implying that $\lambda=\overline{\lambda}$, which can only be true is $\lambda\in\R$.}
+	(\lambda \vec{x}+\mu\vec{y},\vec{z}) = & \ \lambda(\vec{x},\vec{z} )+\mu(\vec{y},\vec{z}) \tag{1} \\
+	(\vec{x},\vec{y})=                     & \ \overline{(\vec{y},\vec{x})}\tag{2}                    \\
+	(\vec{x},\vec{x})\geq                  & \ 0 \tag{3}
+	\st{and $T$ being self adjoint}
+	(T\vec{x},{y})=                        & \ (\vec{x},T\vec{y})
 \end{align*}
-
-\paragraph{(ii)} 
-The proof in (i) fails if $T$ is not self adjoint due to the fact that we cannot claim $(x,Tx)=(Tx,x)$ unless $T$ is self adjoint.
- 
-\paragraph{(iii)}
+Thus, let \(v\) be an eigenvector with eigenvalue \(lambda\).
 \begin{align*}
-\st{By the self adjoint property}
-(Tv,w)=&\ (v,Tw)	\\
-\st{since $Tv=\lambda v$ and $Tw=\mu w$} 
-(\lambda v , w) =&\ (v,\mu w)\\
-\st{by property 1}
-(\lambda v , w) =&\  \lambda(v,w)\\
-(v,\mu w) =&\ \mu(v,w)\\
-\st{thus}
-\lambda(v,w)=&\ \mu(v,w)\\
-\st{which cannot be true unless $(v,w)=0$ as $\lambda$ and $\mu$ are distinct eigenvalues.}
+	\lambda(\vec{v}, \vec{v})
+	 & = (\lambda\vec{v}, \vec{v}) \quad\textit{(property 1)}                       \\
+	 & = (T\vec{v}, \vec{v}) \quad\textit{(eigenvector property)}                   \\
+	 & = (\vec{v}, T\vec{v}) \quad\textit{(self adjoint property)}                  \\
+	 & = (\vec{v}, \lambda\vec{v}) \quad\textit{(eigenvector property)}             \\
+	 & = \overline{(\lambda\vec{v}, \vec{v})} \quad\textit{(property 2)}            \\
+	 & = \overline{\lambda}\overline{(\vec{v}, \vec{v})} \quad\textit{(property 1)} \\
+	 & = \overline{\lambda}(\vec{v}, \vec{v}) \quad\textit{(property 2)}            \\
+	\lambda(\vec{v}, \vec{v}) = \overline{\lambda}(\vec{v}, \vec{v})
+	 & \implies \lambda = \overline{\lambda}                                        \\
+	 & \implies \lambda \in \R
+\end{align*}
+\paragraph{(ii)}
+The proof in (i) fails if $T$ is not self adjoint due to the fact that we cannot claim $(x,Tx)=(Tx,x)$ unless $T$ is self adjoint.
+\paragraph{(iii)}
+Both \(\lambda\) and \(\mu\) are real by part (i).
+\begin{align*}
+	\lambda(\vec{v}, \vec{w})
+	 & = (T\vec{v}, \vec{w})   \\
+	 & = (\vec{v}, T\vec{w})   \\
+	 & = \mu(\vec{v}, \vec{w}) \\
+	\st{which cannot be true unless $(v,w)=0$ as $\lambda$ and $\mu$ are distinct eigenvalues.}
 \end{align*}
 \paragraph{(iv)}
-
-\subsection{Question 4}
-
-\subsubsection{Q4a}
-$\sqrt{\alpha}\in\Q$ implies that $\alpha\in\Q$. Thus result of the mapping $f(p_nX^n+\cdots+p_1X+p_0)= p_n(\sqrt{\alpha})^n+\cdots+p_1\sqrt{\alpha}+p_0$ can be simplied into the form $a+b\sqrt{\alpha}$, where $a,b\in\Q$. If $n$ is even. 
+By constructive method,
 \begin{align*}
-p_n(\sqrt{\alpha})^n+\cdots+p_1\sqrt{\alpha}+p_0=&\ p_0+p_2\alpha+p_4\alpha^2+\cdots+p_n\alpha^{\frac{n}{2}}\\
-&+p_1\sqrt{\alpha}+p_3\alpha\sqrt{a}+\cdots+p_{n-1}\alpha^{\frac{n}{2}-1}\sqrt{\alpha}\\
-=&\ \sum_{i=0}^{n/2}p_{2i}\alpha^{i}+\sum_{i=0}^{\frac{n}{2}-1}p_{2i+1}\alpha^{i}\sqrt{\alpha} 
-\st{let}
-a=&\ \sum_{i=0}^{n/2}p_{2i}\alpha^{i}\\
-\st{and}
-b=&\ \sum_{i=0}^{\frac{n}{2}-1}p_{2i+1}\alpha^{i}
-\st{to get}
-\ p_0+p_2\alpha+p_4\alpha^2+\cdots+p_n\alpha^{\frac{n}{2}}=&\ a+b\sqrt{\alpha}
-\st{proof is same if $n$ is odd except for an additional term. Therefore, $f$ maps every rational polynomial to a real number of the form $a+b\sqrt{\alpha}$ for some $a,b\in\Q$, hence}
-\Ima{f}=&\ \{a+b\sqrt{\alpha}:a,b\in\Q\}
-\end{align*} 
+	\lambda            & = 1                 \\
+	\mu                & = 2                 \\
+	\lambda            & \ne \mu             \\
+	\vec{v}            & = \begin{pmatrix}
+		                       1 \\
+		                       0
+	                       \end{pmatrix}    \\
+	\vec{w}            & = \begin{pmatrix}
+		                       1 \\
+		                       1
+	                       \end{pmatrix}    \\
+	(\vec{v}, \vec{w}) & \ne 0               \\
+	D                  & = \begin{pmatrix}
+		                       \lambda & 0   \\
+		                       0       & \mu
+	                       \end{pmatrix}    \\
+	                   & = \begin{pmatrix}
+		                       1 & 0 \\
+		                       0 & 2
+	                       \end{pmatrix}    \\
+	P                  & = \begin{pmatrix}
+		                       \vec{v} & \vec{w}
+	                       \end{pmatrix} \\
+	                   & = \begin{pmatrix}
+		                       1 & 1 \\
+		                       0 & 1
+	                       \end{pmatrix}    \\
+	T                  & = PDP^{-1}          \\
+	                   & = \begin{pmatrix}
+		                       1 & 1 \\
+		                       0 & 2
+	                       \end{pmatrix}
+\end{align*}
+\subsubsection{Q3b}
+\paragraph{(i)}
+\paragraph{(ii)}
+\paragraph{(iii)}
+\paragraph{(iv)}
+\subsection{Question 4}
+\subsubsection{Q4a}
+$\sqrt{\alpha}\in\Q$ implies that $\alpha\in\Q$. Thus result of the mapping $f(p_nX^n+\cdots+p_1X+p_0)= p_n(\sqrt{\alpha})^n+\cdots+p_1\sqrt{\alpha}+p_0$ can be simplied into the form $a+b\sqrt{\alpha}$, where $a,b\in\Q$. If $n$ is even.
+\begin{align*}
+	p_n(\sqrt{\alpha})^n+\cdots+p_1\sqrt{\alpha}+p_0=           & \ p_0+p_2\alpha+p_4\alpha^2+\cdots+p_n\alpha^{\frac{n}{2}}                                   \\
+	                                                            & +p_1\sqrt{\alpha}+p_3\alpha\sqrt{a}+\cdots+p_{n-1}\alpha^{\frac{n}{2}-1}\sqrt{\alpha}        \\
+	=                                                           & \ \sum_{i=0}^{n/2}p_{2i}\alpha^{i}+\sum_{i=0}^{\frac{n}{2}-1}p_{2i+1}\alpha^{i}\sqrt{\alpha}
+	\st{let}
+	a=                                                          & \ \sum_{i=0}^{n/2}p_{2i}\alpha^{i}                                                           \\
+	\st{and}
+	b=                                                          & \ \sum_{i=0}^{\frac{n}{2}-1}p_{2i+1}\alpha^{i}
+	\st{to get}
+	\ p_0+p_2\alpha+p_4\alpha^2+\cdots+p_n\alpha^{\frac{n}{2}}= & \ a+b\sqrt{\alpha}
+	\st{proof is same if $n$ is odd except for an additional term. Therefore, $f$ maps every rational polynomial to a real number of the form $a+b\sqrt{\alpha}$ for some $a,b\in\Q$, hence}
+	\im{f}=                                                     & \ \{a+b\sqrt{\alpha}:a,b\in\Q\}
+\end{align*}
 
-
-
+\subsubsection{Q4b}
+% Yes.
+% If \(\sqrt{\alpha}\) is rational, then \(\im{f} = \Q\) which is definitely a field.
+% If \(\sqrt{\alpha}\) is irrational, 
