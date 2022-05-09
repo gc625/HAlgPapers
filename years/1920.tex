@@ -3,7 +3,7 @@
 \subsection{Question 1}
 \subsection{Question 2}
 \subsubsection{Q2a}
-Here provides a faster method:\\
+Here provides a faster method:
 \begin{alignat*}{2}
 	f(1, 1, 1) & = (1, 2)   & = 0 (2, 1) + 1 (1, 2) \\
 	f(1, 2, 1) & = (-1, -2) & = 0 (2, 1) - 1 (1, 2) \\
@@ -129,7 +129,12 @@ consider \(p_1(X) = X + 1\) and \(p_2(X) = -X\).
 \subsubsection{Q2d}
 \paragraph{(i)} \textbf{Yes}. See Exercise 80.
 \paragraph{(ii)} \textbf{No}. Let \(P = Q\) be constant and it violates property 3.
-\paragraph{(iii)} \textbf{No}. Let \(P = \prod_{i=1}^{n}{(X - x_i)}\) and it violates property 3.
+\paragraph{(iii)} \textbf{Yes}. Linearity and symmetric is trivial. Check property 3:
+\begin{align*}
+	(P, P) = \sum_{j = 1}^{n}{P(x_j)^2} \ge 0
+\end{align*}
+Equality holds only when \(P(x_j) = 0\) for all \(j\).
+However, \(P(X)\) has at most \(n-1\) roots so the only possible case is \(P(X) = 0\).
 \subsection{Question 3}
 \subsubsection{Q3a}
 See THEOREM 5.3.7.
