@@ -209,22 +209,54 @@ By constructive method,
 \paragraph{(iv)}
 \subsection{Question 4}
 \subsubsection{Q4a}
-$\sqrt{\alpha}\in\Q$ implies that $\alpha\in\Q$. Thus result of the mapping $f(p_nX^n+\cdots+p_1X+p_0)= p_n(\sqrt{\alpha})^n+\cdots+p_1\sqrt{\alpha}+p_0$ can be simplied into the form $a+b\sqrt{\alpha}$, where $a,b\in\Q$. If $n$ is even.
 \begin{align*}
-	p_n(\sqrt{\alpha})^n+\cdots+p_1\sqrt{\alpha}+p_0=           & \ p_0+p_2\alpha+p_4\alpha^2+\cdots+p_n\alpha^{\frac{n}{2}}                                   \\
-	                                                            & +p_1\sqrt{\alpha}+p_3\alpha\sqrt{a}+\cdots+p_{n-1}\alpha^{\frac{n}{2}-1}\sqrt{\alpha}        \\
-	=                                                           & \ \sum_{i=0}^{n/2}p_{2i}\alpha^{i}+\sum_{i=0}^{\frac{n}{2}-1}p_{2i+1}\alpha^{i}\sqrt{\alpha}
-	\st{let}
-	a=                                                          & \ \sum_{i=0}^{n/2}p_{2i}\alpha^{i}                                                           \\
-	\st{and}
-	b=                                                          & \ \sum_{i=0}^{\frac{n}{2}-1}p_{2i+1}\alpha^{i}
-	\st{to get}
-	\ p_0+p_2\alpha+p_4\alpha^2+\cdots+p_n\alpha^{\frac{n}{2}}= & \ a+b\sqrt{\alpha}
-	\st{proof is same if $n$ is odd except for an additional term. Therefore, $f$ maps every rational polynomial to a real number of the form $a+b\sqrt{\alpha}$ for some $a,b\in\Q$, hence}
-	\im{f}=                                                     & \ \{a+b\sqrt{\alpha}:a,b\in\Q\}
+	\sum_{i = 0}^{n}{p_{i}(\sqrt{\alpha})^i}
+	 & = \sum_{i = 0}^{\lfloor \frac{n}{2} \rfloor}{p_{2i}(\sqrt{\alpha})^{2i}}
+	+ \sum_{i = 0}^{\lfloor \frac{n}{2} \rfloor}{p_{2i+1}(\sqrt{\alpha})^{2i+1}} \\
+	 & = \sum_{i = 0}^{\lfloor \frac{n}{2} \rfloor}{p_{2i}\alpha^i}
+	+ \sum_{i = 0}^{\lfloor \frac{n}{2} \rfloor}{p_{2i+1}\alpha^i\sqrt{\alpha}}  \\
+	 & = \left(\sum_{i = 0}^{\lfloor \frac{n}{2} \rfloor}{p_{2i}\alpha^i}\right)
+	+ \left(\sum_{i = 0}^{\lfloor \frac{n}{2} \rfloor}{p_{2i+1}\alpha^i}\right)\sqrt{\alpha}
 \end{align*}
-
+Therefore, $f$ maps every rational polynomial to a real number of the form $a+b\sqrt{\alpha}$ for some $a,b\in\Q$
+Now we show it is surjective by \(f(a+bX) = a + b\sqrt{\alpha}\).
+\newline
+Claim:
+\begin{equation*}
+	\ker{f} =
+	\begin{cases}
+		{}_{\Q[X]}\langle X - \sqrt{\alpha} \rangle & \sqrt{\alpha} \in \Q \\
+		{}_{\Q[X]}\langle X^2 - \alpha \rangle      & \text{otherwise}
+	\end{cases}
+\end{equation*}
+If \(\sqrt{\alpha} \in \Q\), \(p(X) = q(X) (X - \sqrt{\alpha}) + a\).
+\begin{align*}
+	p(X) \in \ker{f}
+	 & \iff f(p(X)) = 0                                               \\
+	 & \iff f(q(X) (X - \sqrt{\alpha}) + a) = 0                       \\
+	 & \iff f(a) = 0                                                  \\
+	 & \iff a = 0                                                     \\
+	 & \iff (X - \sqrt{\alpha}) | p(X)                                \\
+	 & \implies \ker{f} = {}_{\Q[X]}\langle X - \sqrt{\alpha} \rangle
+\end{align*}
+If \(\sqrt{\alpha} \notin \Q\), \(p(X) = q(X) (X^2 - \alpha) + a + bX\).
+\begin{align*}
+	p(X) \in \ker{f}
+	 & \iff f(p(X)) = 0                                          \\
+	 & \iff f(q(X) (X^2 - \alpha) + a + bX) = 0                  \\
+	 & \iff f(a + bX) = 0                                        \\
+	 & \iff a + b \sqrt{\alpha} = 0                              \\
+	 & \iff a = b = 0 \quad\text{($\alpha$ is irrational)}       \\
+	 & \iff (X^2 - \alpha) + a + bX) | p(X)                      \\
+	 & \implies \ker{f} = {}_{\Q[X]}\langle X^2 - \alpha \rangle
+\end{align*}
+Hence \(\ker{f}\) is a principle ideal.
 \subsubsection{Q4b}
-% Yes.
-% If \(\sqrt{\alpha}\) is rational, then \(\im{f} = \Q\) which is definitely a field.
-% If \(\sqrt{\alpha}\) is irrational, 
+Yes.
+If \(\sqrt{\alpha}\) is rational, then \(\im{f} = \Q\) which is definitely a field.
+If \(\sqrt{\alpha}\) is irrational, then using high school math,
+\begin{align*}
+	(a + b\sqrt{\alpha})^{-1} = \frac{a - b \sqrt{\alpha}}{a^2 - \alpha b^2}
+\end{align*}
+Other properties of field can be verified easily.
+So \(\im{f}\) is a field.
